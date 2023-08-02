@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Invitation</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  .invite-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  .invite-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+  }
+  .invite-animation {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  .star {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    animation: rotate 5s linear infinite;
+  }
+  .point {
+    position: absolute;
+    width: 3px;
+    height: 80px;
+    background-color: #66ff99; /* Mint green color */
+    transform: rotate(30deg);
+    transform-origin: bottom center;
+  }
+  .point:nth-child(1) { transform: rotate(0deg); }
+  .point:nth-child(2) { transform: rotate(60deg); }
+  .point:nth-child(3) { transform: rotate(120deg); }
+  .point:nth-child(4) { transform: rotate(180deg); }
+  .point:nth-child(5) { transform: rotate(240deg); }
+  .point:nth-child(6) { transform: rotate(300deg); }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+</style>
+</head>
+<body>
+<div class="invite-container">
+  <div class="invite-card">
+    <h1>JANIIIEEEE...</h1>
+    <p>Would you join us on Friday evening for a chill day with some deranged and possibly gay folks? Silliness is guaranteed! Ps: Roro promises to try weird drinks with you, Unun will eat all the unwanted eggs and Diva will laugh uncontrollably. So what do you say?</p>
+    <div class="invite-animation">
+      <div class="star">
+        <div class="point"></div>
+        <div class="point"></div>
+        <div class="point"></div>
+        <div class="point"></div>
+        <div class="point"></div>
+        <div class="point"></div>
+      </div>
+    </div>
+    <p>Click the button below and make us the happiest Shabus:</p>
+    <button id="acceptButton">Moi accepts</button>
+  </div>
+</div>
+
+<script>
+  const acceptButton = document.getElementById('acceptButton');
+  acceptButton.addEventListener('click', () => {
+    // You can customize this part to perform an action upon accepting the invite
+    alert('Danke');
+  });
+</script>
+</body>
+</html>
